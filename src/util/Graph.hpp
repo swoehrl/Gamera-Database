@@ -44,7 +44,7 @@ public:
             return;
         KeyMap& k = (*it).second;
         //k.clear();
-        for (auto p : k) {
+        for (auto& p : k) {
             if (p.second) p.second = false;
         }
     }
