@@ -146,7 +146,15 @@ bool LockManager::deadlock(TxId tx, TupleId tid) {
         return true;
     } else 
         return false;
-
 }
+
+
+LockManager::~LockManager() {
+    for (auto p : waiterlocks) {
+        delete p.second.first;
+        delete p.second.second;
+    }
+}
+
 
 }

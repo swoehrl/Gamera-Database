@@ -49,6 +49,7 @@ public:
     bool noLocks() {
         return locks.empty();
     };
+    ~LockManager();
 private:
     typedef std::list<TxId> TxList;
     typedef std::list<TupleId> TidList;
